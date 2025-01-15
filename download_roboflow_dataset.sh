@@ -1,6 +1,6 @@
 #!/bin/bash
 
-datasetUrl="daydayup/cld-test3/7"
+datasetUrl="hexchip/-7xvt9/1"
 datasetFormat="yolov11"
 
 while [[ "$#" -gt 0 ]]; do
@@ -20,6 +20,6 @@ fi
 docker run -it --rm \
   -v ~/.config/roboflow:/root/.config/roboflow \
   -v ./datasets:/datasets \
-  hexchip/roboflow-downloader \
+  registry.cn-hangzhou.aliyuncs.com/hexchip/roboflow-downloader:latest \
   --datasetUrl "$datasetUrl" \
   --datasetFormat "$datasetFormat"
