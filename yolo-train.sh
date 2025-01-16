@@ -3,7 +3,7 @@
 set -e
 
 task="detect"
-datasetName="王者荣耀-1"
+datasetName="王者荣耀-2"
 yolo_extra_args=()
 
 while [[ "$#" -gt 0 ]]; do
