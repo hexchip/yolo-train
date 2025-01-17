@@ -17,9 +17,9 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 docker run -it --rm \
-  --ipc=host \
-  --gpus all \
-  -v ./datasets:/datasets \
-  -v ./runs:/ultralytics/runs \
-  registry.cn-hangzhou.aliyuncs.com/hexchip/ultralytics:8.3.40 \
-  yolo ${task} train data=/datasets/${datasetName}/data.yaml ${yolo_extra_args[@]}
+--ipc=host \
+--gpus all \
+-v ./datasets:/datasets \
+-v ./runs:/ultralytics/runs \
+registry.cn-hangzhou.aliyuncs.com/hexchip/ultralytics:8.3.40 \
+yolo ${task} train data=/datasets/${datasetName}/data.yaml ${yolo_extra_args[@]}

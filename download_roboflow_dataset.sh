@@ -1,6 +1,8 @@
 #!/bin/bash
 
-datasetUrl="hexchip/-7xvt9/1"
+set -e
+
+datasetUrl="hexchip/-7xvt9/7"
 datasetFormat="yolov11"
 
 while [[ "$#" -gt 0 ]]; do
@@ -16,10 +18,9 @@ if [ ! -d "./datasets" ]; then
     mkdir datasets
 fi
 
-# 执行 Docker 命令
 docker run -it --rm \
-  -v ~/.config/roboflow:/root/.config/roboflow \
-  -v ./datasets:/datasets \
-  registry.cn-hangzhou.aliyuncs.com/hexchip/roboflow-downloader:latest \
-  --datasetUrl "$datasetUrl" \
-  --datasetFormat "$datasetFormat"
+-v ~/.config/roboflow:/root/.config/roboflow \
+-v ./datasets:/datasets \
+registry.cn-hangzhou.aliyuncs.com/hexchip/roboflow-downloader:latest \
+--datasetUrl "$datasetUrl" \
+--datasetFormat "$datasetFormat"
