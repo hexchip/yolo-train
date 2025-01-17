@@ -21,5 +21,5 @@ docker run -it --rm \
   --gpus all \
   -v ./datasets:/datasets \
   -v ./runs:/ultralytics/runs \
-  registry.cn-hangzhou.aliyuncs.com/hexchip/ultralytics:8.3.61 \
+  registry.cn-hangzhou.aliyuncs.com/hexchip/ultralytics:8.3.40 \
   yolo ${task} train data=/datasets/${datasetName}/data.yaml ${yolo_extra_args[@]}
