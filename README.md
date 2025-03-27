@@ -192,7 +192,7 @@ download_roboflow_dataset.sh ./--datasetUrl myproject/mydataset/1 --datasetForma
 而`./yolo-infer_video.sh`支持按空格暂停，按加号和减号调整倍速(加速的前提是你的推理速度够快)。
 
 如果你问为什么没有慢放，我的回答是没时间做了!  
-而且也不支持设置`imgsz=320`和`conf=0.5`这类重要的参数。。。
+而且也不支持设置`imgsz=320`和`conf=0.5`这类重要的参数。。。  
 **imgsz被固定设置为384, 800！imgsz=高,宽，别搞错了~**
 
 最后，**欢迎同学们一起参与进来贡献自己的力量！**
