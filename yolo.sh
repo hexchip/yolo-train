@@ -47,7 +47,6 @@ while [[ "$#" -gt 0 ]]; do
             ;;
         --enable-nvidia-gpu)
             is_enable_nvidia_gpu=1;
-            shift 
             ;;
         *)
             yolo_args+=("$1") 
